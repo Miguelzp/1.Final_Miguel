@@ -4,6 +4,6 @@
 
 @section('content')
 
-  <h3>@lang('messages.main_title')</h3>
+  <h3>Miguel Zabal</h3>
   @lang('messages.main_text')
 @endsection

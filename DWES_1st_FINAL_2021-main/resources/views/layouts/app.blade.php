@@ -15,8 +15,9 @@
           <div class="links">
                 <a href="/">@lang('messages.cycle_students')</a>
                 <a href="#">@lang('messages.student_to_cycle')</a>
-                <a href="#">@lang('messages.student_to_company')</a>
-                <a href="#">@lang('messages.new_student')</a>
+                <a href="asignar">@lang('messages.student_to_company')</a>
+                <a href="crearAlumnos">@lang('messages.new_student')</a>
+                <a href="mostrarEmpresas">Mostrar Empresas y alumnos</a>
           </div>
           <hr><br><br>
 					<div class="op">

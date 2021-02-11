@@ -19,20 +19,26 @@ class StudentSeeder extends Seeder
     public function run()
     {
 
-        $names = ['Oliver', 'Harry', 'George', 'Noah', 'Jack', 'Jacob',
+        $nombres = ['Oliver', 'Harry', 'George', 'Noah', 'Jack', 'Jacob',
             'Leo', 'Oscar', 'Charlie', 'Muhammad'];
-        $lastnames = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown',
+        $apellidos = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown',
             'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor'];
-        $genders = ['male', 'female'];
+        $generos = ['male', 'female'];
+        $correos = ['student1@zubirimanteo.com', 'studesfghdfghdfghdfghnt1@zubirimanteo.com','student12@zubirimanteo.com',
+        'student13@zubirimanteo.com', 'student1wert@zubirimanteo.com', 'studensdfgsdt1@zubirimanteo.com',
+        'studdfgcvbnent1@zubirimanteo.com','studenpot1@zubirimanteo.com','studemjunt1@zubirimanteo.com',
+        'studqent1@zubirimanteo.com',
+    ];
 
         for ($i = 0; $i < 10; $i++) {
-            DB::table('clients')->insert([
+            DB::table('alumnos')->insert([
                 'nif' => random_int(11111111, 99999999) . chr(rand(65,90)),
-                'name' => $names[random_int(0, 9)],
-                'lastname' => $lastnames[random_int(0, 9)],
-                'phone' => random_int(610000000, 699999999),
-                'email' => "student@zubirimanteo.com",
-                'gender' => $genders[random_int(0, 1)],
+                'nombre' => $nombres[random_int(0, 9)],
+                'apellido' => $apellidos[random_int(0, 9)],
+                'telefono' => random_int(610000000, 699999999),
+                'direccion' => "la calle",
+                'email' => $correos[random_int(0, 9)],
+                'genero' => $generos[random_int(0, 1)],
             ]);
         }
     }

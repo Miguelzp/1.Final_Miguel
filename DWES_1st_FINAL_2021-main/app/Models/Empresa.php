@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Empresa extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'nombre',
+        'direccion',
+        'telefono',
+        'email',
+        'web',
+    ];
+
+    //Relacion many to many entre las empresas y los alumnos
+    public function alumnos(){
+        return $this->belongsToMany('App\Models\Alumno');
+    }
+}
